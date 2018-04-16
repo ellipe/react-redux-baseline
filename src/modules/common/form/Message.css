@@ -1,0 +1,26 @@
+.form-message {
+  display: block;
+	color: rgba(0, 128, 193,1);
+  margin-bottom: 30px;
+}
+
+.form-message h1 {
+  display: block;
+	color: rgba(0, 128, 193,1);
+  font-size:16px;
+  font-weight: bold;
+}
+
+.form-message p {
+  display: block;
+	color: rgba(0, 128, 193,1);
+  font-size:12px;
+  font-weight: normal;
+}
+
+.form-link {
+	display: block;
+	color: rgba(0, 128, 193,1);
+  font-size:14px;
+  font-weight:lighter;
+}

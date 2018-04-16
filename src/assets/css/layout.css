@@ -1,0 +1,308 @@
+
+/* Reset */
+*, *:before, *:after {
+    position: relative;
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: 0;
+    border-radius: 0px;
+    box-shadow: none;
+    border:0px;
+    text-decoration: none;
+}
+
+html, body, #root {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color:rgba(0, 0, 0, .8);
+    background-color: #F5F5F5;
+
+}
+
+/* Colors */
+:root {
+  --main-white: rgb(255, 255, 255);
+  --main-light: rgb(255, 255, 255);
+  --main-light-dark: rgba(255, 255, 255,.7);
+  --main-gray: rgb(233, 233, 233);
+  --main-yellow: rgb(224, 221, 76);
+  --main-dark-blue: rgba(1, 84, 163, 1);
+  --main-blue: rgba(0, 128, 193,1);
+  --main-blue-light: rgba(0, 128, 193,.6);
+  --main-red: rgb(230, 78, 78);
+  --main-dark: rgb(31, 31, 31);
+  --main-dark-light: rgba(0, 0, 0,.7);
+  --main-orange: rgb(224, 138, 22);
+  --main-green: #4CAF50;
+}
+
+/* Backgrounds */
+.bg-white{ background-color: var(--main-white) }
+.bg-light{ background-color: var(--main-light) }
+.bg-gray{ background-color: var(--main-gray) }
+.bg-yellow{ background-color: var(--main-yellow) }
+.bg-blue{ background-color: var(--main-blue) }
+.bg-dark-blue{ background-color: var(--main-dark-blue) }
+.bg-red{ background-color: var(--main-red) }
+.bg-dark{ background-color: var(--main-dark) }
+.bg-dark-light{ background-color: var(--main-dark-light) }
+.bg-orange{ background-color: var(--main-orange) }
+.bg-green{ background-color: var(--main-green) }
+
+.bgg-blue{
+  background: var(--main-blue);
+  background: -moz-linear-gradient(top, var(--main-blue-dark) 50%, var(--main-blue) 100%);
+  background: -webkit-linear-gradient(top, var(--main-blue-dark) 50%, var(--main-blue) 100%);
+  background: -o-linear-gradient(top, var(--main-blue-dark) 50%, var(--main-blue) 100%);
+  background: -ms-linear-gradient(top, var(--main-blue-dark) 50%, var(--main-blue) 100%);
+  background: linear-gradient(to bottom, var(--main-blue-dark) 50%, var(--main-blue) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--main-blue-dark)', endColorstr='var(--main-blue)', GradientType=0 );
+}
+
+/* Texts */
+.text-light-dark{color:var(--main-light-dark); }
+.text-light{color:var(--main-light); }
+.text-dark{color:var(--main-dark); }
+.text-dark-light{color:var(--main-dark-light); }
+.text-red{color:var(--main-red); }
+.text-orange{color:var(--main-orange); }
+.text-blue{color:var(--main-blue); }
+.text-yellow{color:var(--main-yellow); }
+
+.text-bold,.text-strong{font-weight: bold !important;}
+.text-underline{text-decoration: underline;;}
+.text-overline{text-decoration:overline;}
+.truncate,.text-truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Grids */
+.container {
+   width: 80%;
+   max-width: 1600px;
+   margin: 0 auto;
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+.fluid{
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.row:before,
+.row:after {
+  content:"";
+  display: table ;
+  clear:both;
+}
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  width: 8.3333%;
+  padding: 10px;
+}
+
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66666%; }
+.col-3 { width: 24.99%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.665%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.333%; }
+.col-8 { width: 66.66666664%; }
+.col-9 { width: 74.999997%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.666663%; }
+.col-12 { width: 100%; }
+
+/* Responsive */
+
+@media all and (max-width:800px) {
+
+  .container {
+     width: 100%;
+     max-width: 1600px;
+     margin: 0 auto;
+  }
+
+  .col-1 { width: 16.6666%; }
+  .col-2 { width: 33.33%; }
+  .col-3 { width: 50%; }
+  .col-4 { width: 66.66%; }
+  .col-5 { width: 83.32%; }
+  .col-6 { width: 100%; }
+  .col-7 { width: 100%; }
+  .col-8 { width: 100%; }
+  .col-9 { width: 100%; }
+  .col-10 { width: 100%; }
+  .col-11 { width: 100%; }
+  .col-12 { width: 100%; }
+
+  .row .col-3:last-of-type{
+    width: 100%;
+  }
+
+  .row .col-5 ~ .col-2{
+    width: 100%;
+  }
+}
+
+@media all and (max-width:650px) {
+
+  .container {
+     width: 100%;
+     max-width: 1600px;
+     margin: 0 auto;
+  }
+
+  .col-1 { width: 50%; }
+  .col-2 { width: 100%; }
+  .col-3 { width: 100%; }
+  .col-4 { width: 100%; }
+  .col-5 { width: 100%; }
+  .col-6 { width: 100%; }
+  .col-7 { width: 100%; }
+  .col-8 { width: 100%; }
+  .col-9 { width: 100%; }
+  .col-10 { width: 100%; }
+  .col-11 { width: 100%; }
+  .col-12 { width: 100%; }
+}
+/* End Grids*/
+
+/* Alignment */
+
+.center {
+  margin: auto;
+  float: none;
+}
+
+.middle {
+  position: relative;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+
+/*Flex*/
+.vertical-align {
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-align-items: center;
+   -ms-flex-align: center;
+   align-items: center;
+}
+
+.justify-center {
+  justify-content: center
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* Text Alignment*/
+.text-center {
+  text-align: center;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.padding-bottom {
+  padding-bottom: 10px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.margin-top-lg {
+  margin-top: 30px;
+}
+
+.margin-top-hg {
+  margin-top: 50px;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 30px;
+}
+
+.margin-rigth {
+  margin-right: 16px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 128, 193,0.7);
+}
+
+.border-bottom-ligth {
+  border-bottom: 1px solid rgba(0, 128, 193, 0.1);
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.divisor {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 128, 193, 0.3);
+}
+
+.hidden {
+  border: 0px;
+}
+
+.logo {
+  max-height: 150px;
+}
+
+form {
+	padding: 20px;
+  	width: 100%;
+	height: 100%;
+}
+
+.form-link {
+	display: block;
+	color: rgba(0, 128, 193,1);
+  	font-size:14px;
+  	font-weight:lighter;
+}

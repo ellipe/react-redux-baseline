@@ -1,0 +1,35 @@
+/********** Splash ************/
+.splash {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.splash h1 {
+	font-size: 30px;
+}
+
+.small-banner {
+	height: 60px;
+	width: 100%;
+	padding-bottom: 5px;
+  padding-top: 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.small-banner img {
+	max-height: 70px;
+	display: block;
+	margin: 0 auto;
+}
+
+@media all and (max-width:667px) {
+  .splash {
+    box-shadow: none;
+  }
+
+  .middle {
+    top: 0%;
+    transform: translate(0,0%);
+  }
+}

@@ -1,0 +1,27 @@
+.form-field-submit {
+	margin-bottom: 10px;
+	display: block;
+  font-weight: lighter;
+}
+
+.form-field-submit input[type="submit"]{
+  width: 100%;
+  padding:10px;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.form-field-submit {
+  margin-bottom: 10px;
+  display: block;
+  font-weight: lighter;
+}
+
+.form-field-submit input[type="submit"]{
+  width: 100%;
+  padding:10px;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}

@@ -1,0 +1,85 @@
+.input-field {
+	  margin-bottom: 30px;
+	  display: block;
+  	width: 100%;
+}
+.input-field [type="text"],
+.input-field [type="password"]{
+ 	  width: 100%;
+ 	  font-size: 16px;
+ 	  padding-top:5px;
+ 	  padding-bottom: 10px;
+ 	  padding-left: 0px;
+ 	  padding-right: 0px;
+ 	  border-radius: 0px;
+ 	  border:none;
+ 	  background: transparent;
+}
+.input-field-label {
+  	color: rgba(91, 125, 149, 0.7);
+  	font-size:18px;
+  	font-weight:normal;
+  	position:absolute;
+  	pointer-events:none;
+  	left:0px;
+  	top:0px;
+  	transition:0.2s ease all;
+  	-moz-transition:0.2s ease all;
+  	-webkit-transition:0.2s ease all;
+}
+
+
+.input-field-bar{
+  	display:block;
+  	width:100%;
+  	height: 1px;
+  	background: rgba(0, 128, 193,.6);
+  	position: relative;
+  	top:-5px;
+  	-webkit-transition: ease-in .4s;
+  	-o-transition: all ease-in .4s;
+  	transition: all ease-in .4s;
+}
+.input-field-bar:before, .input-field-bar:after 	{
+  	content:'';
+  	height:2px;
+  	width:0;
+  	bottom:1px;
+  	position:absolute;
+  	background:#5264AE;
+  	transition:0.2s ease all;
+  	-moz-transition:0.2s ease all;
+  	-webkit-transition:0.2s ease all;
+}
+.input-field-bar:before {
+  	left:50%;
+}
+
+.input-field-bar:after {
+  	right:50%;
+}
+.input-field input:focus ~ .input-field-bar:before,
+.input-field input:focus ~ .input-field-bar:after,
+.input-field input:active ~ .input-field-bar:before,
+.input-field input:active ~ .input-field-bar:after{
+  	width:50%;
+}
+
+.input-field input:active ~ .input-field-bar,
+.input-field input:focus ~ .input-field-bar, {
+	  outline: none;
+}
+
+.input-field input:active ~ label,
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+	  top:-20px;
+  	font-size:10px;
+  	color:#5C7D95;
+}
+
+@media all and (max-width:667px) {
+  .input-field-label {
+    font-size:14px;
+  }
+}
